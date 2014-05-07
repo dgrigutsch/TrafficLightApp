@@ -1,4 +1,4 @@
-package de.edareling.net.ampeldarlingapp.app;
+package de.edarling.net.app;
 
 
 import com.google.gson.annotations.Expose;

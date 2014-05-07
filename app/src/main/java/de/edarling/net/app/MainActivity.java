@@ -1,4 +1,4 @@
-package de.edareling.net.ampeldarlingapp.app;
+package de.edarling.net.app;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,11 +21,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(de.edareling.net.ampeldarlingapp.app.R.layout.activity_main);
         ButterKnife.inject(this);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(de.edareling.net.ampeldarlingapp.app.R.id.container, new PlaceholderFragment())
                     .commit();
         }
     }
@@ -36,11 +36,11 @@ public class MainActivity extends ActionBarActivity {
      */
     public static class PlaceholderFragment extends Fragment {
 
-        @InjectView(R.id.getData)
+        @InjectView(de.edareling.net.ampeldarlingapp.app.R.id.getData)
         Button mGetData;
-        @InjectView(R.id.circularSeekBar1)
+        @InjectView(de.edareling.net.ampeldarlingapp.app.R.id.circularSeekBar1)
         CircularSeekBar mCircularSeekBar1;
-        @InjectView(R.id.tv_seekBarGate)
+        @InjectView(de.edareling.net.ampeldarlingapp.app.R.id.tv_seekBarGate)
         TextView mTvSeekBarGate;
 
         int state = 0;
@@ -53,7 +53,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(de.edareling.net.ampeldarlingapp.app.R.layout.fragment_main, container, false);
             ButterKnife.inject(this, rootView);
             mCircularSeekBar1.setOnSeekBarChangeListener(onCircularSeekBarChangeListener);
             return rootView;
