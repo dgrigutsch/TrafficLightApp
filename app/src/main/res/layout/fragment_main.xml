@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="de.edareling.net.ampeldarlingapp.app.MainActivity$PlaceholderFragment">
+
+    <com.devadvance.circularseekbar.CircularSeekBar
+        android:id="@+id/circularSeekBar1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:padding="0dp"
+        app:start_angle="260"
+        app:end_angle="0"
+        app:circle_x_radius="110"
+        app:circle_y_radius="110"
+        app:use_custom_radii="true"
+        app:progress="0"
+        app:max="100"
+        app:pointer_radius="12"
+        app:pointer_alpha_ontouch="100"
+        app:pointer_color="#0174DF"
+        app:pointer_halo_color="#880174DF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="-110dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GetData"
+        android:id="@+id/getData"
+        android:layout_marginBottom="26dp"
+        android:layout_alignBottom="@+id/circularSeekBar1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/tv_seekBarGate"
+        android:layout_above="@+id/getData"
+        android:layout_alignRight="@+id/getData"
+        android:layout_alignEnd="@+id/getData"
+        android:layout_marginBottom="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+</RelativeLayout>

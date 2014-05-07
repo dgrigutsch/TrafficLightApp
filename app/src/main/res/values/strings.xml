@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AmpelDarling</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="static_url_host">http://wizneteffebd.corp.affinitas.de/</string>
+    <!--<string name="static_url_host">http://172.16.7.119/</string>-->
+
+</resources>
