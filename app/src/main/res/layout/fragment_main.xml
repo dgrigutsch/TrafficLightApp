@@ -7,7 +7,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="de.edarling.net.app.MainActivity$PlaceholderFragment">
+    tools:context="de.edarling.net.app.MainActivity$PlaceholderFragment"
+    tools:ignore="ResAuto">
 
     <com.devadvance.circularseekbar.CircularSeekBar
         android:id="@+id/circularSeekBar1"
@@ -30,7 +31,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="-110dp" />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,9 +49,35 @@
 
     <de.edarling.net.view.AmpelView
         android:id="@+id/ampel_one"
+        app:light_name="L1"
         android:layout_below="@+id/tv_seekBarGate"
         android:layout_marginTop="49dp"
-        android:layout_width="100dp"
-        android:layout_height="200dp" />
+        android:layout_width="80dp"
+        android:layout_height="150dp" />
+
+    <de.edarling.net.view.AmpelView
+        android:id="@+id/ampel_two"
+        app:light_name="L2"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:layout_alignTop="@+id/ampel_one"
+        android:layout_toRightOf="@+id/ampel_one" />
+
+    <de.edarling.net.view.AmpelView
+        android:id="@+id/ampel_three"
+        app:light_name="L3"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:layout_alignTop="@+id/ampel_one"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <de.edarling.net.view.AmpelView
+        android:id="@+id/ampel_four"
+        app:light_name="L4"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:layout_alignTop="@+id/ampel_three"
+        android:layout_toLeftOf="@+id/ampel_three" />
 
 </RelativeLayout>
