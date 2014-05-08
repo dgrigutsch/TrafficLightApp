@@ -6,13 +6,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.devadvance.circularseekbar.CircularSeekBar;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import de.edarling.net.ampel.app.R;
+import de.edarling.net.view.AmpelView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -21,11 +22,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(de.edareling.net.ampeldarlingapp.app.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(de.edareling.net.ampeldarlingapp.app.R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
     }
@@ -36,16 +37,16 @@ public class MainActivity extends ActionBarActivity {
      */
     public static class PlaceholderFragment extends Fragment {
 
-        @InjectView(de.edareling.net.ampeldarlingapp.app.R.id.getData)
-        Button mGetData;
-        @InjectView(de.edareling.net.ampeldarlingapp.app.R.id.circularSeekBar1)
+        @InjectView(R.id.circularSeekBar1)
         CircularSeekBar mCircularSeekBar1;
-        @InjectView(de.edareling.net.ampeldarlingapp.app.R.id.tv_seekBarGate)
+        @InjectView(R.id.tv_seekBarGate)
         TextView mTvSeekBarGate;
+        @InjectView(R.id.ampel_one)
 
+
+        AmpelView mAmpelOne;
         int state = 0;
         AmpelData ampelData;
-
         public PlaceholderFragment() {
 
         }
@@ -53,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(de.edareling.net.ampeldarlingapp.app.R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             ButterKnife.inject(this, rootView);
             mCircularSeekBar1.setOnSeekBarChangeListener(onCircularSeekBarChangeListener);
             return rootView;

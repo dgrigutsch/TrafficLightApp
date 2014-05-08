@@ -11,6 +11,8 @@ import org.nicktate.projectile.Method;
 import org.nicktate.projectile.Projectile;
 import org.nicktate.projectile.StringListener;
 
+import de.edarling.net.ampel.app.R;
+
 public class AmpelData {
 
     PojoAmpelData data;
@@ -47,7 +49,7 @@ public class AmpelData {
 
         Projectile.useOkHttp(true);
         Projectile.draw(activity)
-                .aim(activity.getString(de.edareling.net.ampeldarlingapp.app.R.string.static_url_host))
+                .aim(activity.getString(R.string.static_url_host))
                 .method(Method.GET)
                 .fire(new StringListener() {
                     @Override
@@ -81,7 +83,7 @@ public class AmpelData {
     void sendGateState(int state) {
 
         Projectile.useOkHttp(true);
-        Projectile.draw(activity).aim(activity.getString(de.edareling.net.ampeldarlingapp.app.R.string.static_url_host))
+        Projectile.draw(activity).aim(activity.getString(R.string.static_url_host))
                 .method(Method.GET)
                 .addParam("GP", String.valueOf(state))
                 .fire(new StringListener() {

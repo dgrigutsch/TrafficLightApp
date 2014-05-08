@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <View
+        android:id="@+id/signal_red"
+        android:layout_weight="0.9"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@color/red"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp">
+    </View>
+    <View
+        android:id="@+id/signal_yellow"
+        android:layout_below="@id/signal_red"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@color/yellow"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp">
+    </View>
+    <View
+        android:id="@+id/signal_green"
+        android:layout_below="@id/signal_yellow"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@color/green"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp">
+    </View>
+
+
+    <ImageView
+        android:id="@+id/imgv_ampel"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_ampel"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

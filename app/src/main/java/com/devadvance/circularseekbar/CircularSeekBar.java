@@ -42,7 +42,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import de.edareling.net.ampeldarlingapp.app.R;
+import de.edarling.net.ampel.app.R;
 
 public class CircularSeekBar extends View {
 
